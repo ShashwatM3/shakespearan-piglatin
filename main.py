@@ -29,7 +29,7 @@ def piglatin(query: str = Query(..., description="Input text")):
     completion = client.chat.completions.create(
       model="gpt-4o",
       messages=[
-          {"role": "system", "content": "Respond to all input text into Pig Latin."},
+          {"role": "system", "content": "You are an assistant who only speaks in Pig Latin."},
           {"role": "user", "content": query}
       ],
     )
@@ -41,7 +41,7 @@ def shakespeare(query: str = Query(..., description="Input text")):
     completion = client.chat.completions.create(
       model="gpt-4o",
       messages=[
-          {"role": "system", "content": "Respond to all input text into Shakespearean English."},
+          {"role": "system", "content": "You are an assistant who only speaks in Shakespearan English."},
           {"role": "user", "content": query}
       ],
     )
